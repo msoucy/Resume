@@ -1,7 +1,15 @@
-all: resume.pdf
+RESUMES=${wildcard *.tex}
+PDFS=${RESUMES:.tex=.pdf}
 
-resume.pdf: resume.tex
-	pdflatex resume.tex
+all: $(PDFS)
+
+%.pdf: %.tex
+	pdflatex $(@:.pdf=.tex)
 
 clean:
-	rm resume.pdf >& /dev/null
+	rm -rf *.log *.aux >& /dev/null
+	@echo "Removed build files!"
+
+realclean: clean
+	rm -rf *.pdf >& /dev/null
+	@echo "Removed PDF files!"
