@@ -1,97 +1,88 @@
-% LaTeX file for resume
-% This file uses the resume document class (res.cls)
+\documentclass[line]{res}
+\usepackage{enumitem} % Allows for adding options to lists
+\usepackage[hmargin=3cm,vmargin=2cm]{geometry}
 
-\documentclass{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font
-\setlength{\textheight}{9.5in} % increase text height to fit on 1-page
+\author{Matthew Soucy}
+\title{Matthew Soucy}
 
 \begin{document}
-
-\name{MATTHEW SOUCY\\[12pt]}     % the \\[12pt] adds a blank
-                                 % line after name
-
-\address{\bf LOCAL ADDRESS\\
-        2433 Nathaniel Rochester Hall\\
-        Rochester, NY 14623\\
-        (603) 204-1994\\
-        mas5997@rit.edu}
-
-\address{\bf PERMANENT ADDRESS\\
-        1 Reeds Ferry Way\\
-        Merrimack, NH 03054\\
-        (604) 204-1994\\
-        msoucy@csh.rit.edu}
-
+%\fontsize{11}{15}\selectfont
+\setlength{\textheight}{11.5in} % increase text height to fit on 1-page
+\name{{\Large Matthew Soucy}}
+\address{\large 2433 Nathaniel Rochester Hall\\
+		Rochester, NY 14623\\
+		(603) 204-1994}
 \begin{resume}
 
 \section{EDUCATION}
-    Rochester Institute of Technology, Rochester, NY  \\
-    Bachelor of Science, Computer Science, Expected Graduation 2016   \\
+    Bachelor of Science, Computer Science (Expected Graduation Spring 2015)\\
+    Rochester Institute of Technology, Rochester, NY\\
     G.P.A. 3.680/4.0 (Professional G.P.A. 4.0/4.0)
 
-
 \section{EXPERIENCE}
-   \vspace{-0.1in}
+   \textbf{Student Lab Instructor}
+   \textit{Rochester Institute of Technology}
+   \hfill
+   Winter 2012-2013\\
+   Worked with students taking the Computer Science 4 course in C++.\\
+   Provided instruction and assistance during laboratory sessions.\\
+   Held tutoring hours twice a week.
 
-   \begin{tabbing}
-   \hspace{2.3in}\= \hspace{2.4in}\= \kill % set up two tab positions
-    \bf Grader
-    \>Rochester Institute of Technology
-    \>Fall 2012
-    \\\>Rochester, NY
-   \end{tabbing}\vspace{-15pt}      % suppress blank line after tabbing
-    Graded assignments for the first course in the Computer Science sequence.
-    Wrote a variety of tools to aid in plagarism detection and grading accuracy and consistency.
+   \textbf{Grader}
+   \textit{Rochester Institute of Technology}
+   \hfill
+   Fall 2012\\
+   Graded assignments for the first course in the Computer Science sequence.\\
+   Wrote a variety of tools to aid in plagarism detection and grading accuracy and consistency.
 
-   \begin{tabbing}
-   \hspace{2.3in}\= \hspace{2.4in}\= \kill % set up two tab positions
-    \bf Software Intern
-    \>BAE Systems, Inc.
-    \>Summer 2011, 2012
-    \\\>Nashua, NH
-   \end{tabbing}\vspace{-15pt}      % suppress blank line after tabbing
-    Developed programs in C++ and Python to fix and enhance in-house tools
-    for simulation, testing, and version control enhancement.
+   \textbf{Software Intern}
+   \textit{BAE Systems, Inc., Nashua NH}
+   \hfill
+   Summers 2011, 2012\\
+	Developed programs in C++ and Python to fix and enhance in-house tools for simulation, testing, and version control enhancement.
 
-   \begin{tabbing}
-   \hspace{2.3in}\= \hspace{2.4in}\= \kill % set up two tab positions
-   \bf Software Lead/Member
-    \>FIRST Robotics Team 166
-    \>Fall 2007-Spring 2011
-    \\\>Merrimack, NH
-   \end{tabbing}\vspace{-15pt}      % suppress blank line after tabbing
-    Led and participated in a team of programmers to develop a program to control
-    the team's robot.
+	\textbf{Software Lead}
+	\textit{FIRST Robotics Team 166, Merrimack NH}
+	\hfill
+	Fall 2007-Spring 2011\\
+	Led and participated in a team of programmers to develop a program to control the team's robot.\\
+	Received the Dean's List award at the Granite State Regional.
 
 \section{COMPUTER SKILLS}
-	\begin{itemize}
-    \item Strong programming skills in C, C++, D, and Python
-    \item Working knowledge of Java, PHP, Javascript, HTML, and LaTeX
-    \item Skill with Windows and Unix systems
-    \item Familiar with the Mercurial, Git, Subversion, and Clearcase version control systems
-    \end{itemize}
+	\begin{itemize}[leftmargin=10pt]
+	\item Strong programming skills in C, C++, D, and Python
+	\item Working knowledge of Java, PHP, Javascript, HTML, and LaTeX
+	\item Skill with Windows and Unix systems
+	\item Familiar with the Mercurial, Git, Subversion, and Clearcase version control systems
+	\end{itemize}
 
 \section{RELEVANT EXPERIENCE}
-	\begin{itemize}
-    \item ZeroMQ and ncurses wrappers for D fall 2012
-    \item High-level shell wrapper in Python summers 2011 and 2012
-    \item Functional programming language interpreter written in D winter 2011-2012
-    \end{itemize}
+	\textbf{Metus}
+	\hfill
+	Fall 2012 - Winter 2013
+	\\
+	Object-oriented ZeroMQ and ncurses wrappers for D.
+	
+	\textbf{cleartoolscript}
+	\hfill
+	Summers 2011 and 2012
+	\\
+	High-level shell wrapper in Python to work with the ClearCase version control system.
+	
+	\textbf{Oratd}
+	\hfill
+	Winter 2011-2012
+	\\
+	Functional programming language interpreter written in D.
 
-\section{HONORS AND AWARDS}
-	\begin{itemize}
-    \item FIRST Robotics Dean's List Finalist: Class of 2011
-    \end{itemize}
-
-\section{EXTRACURRICULAR ACTIVITIES}
-	\begin{itemize}
-    \item Active member of Computer Science House at the Rochester Institute of Technology
-    \item Interest in languages and performing arts (theater, music)
-    \end{itemize}
+\section{OTHER ACTIVITIES}
+	\begin{itemize}[leftmargin=10pt]
+	\item Active member of Computer Science House at the Rochester Institute of Technology
+	\item Interest in languages and performing arts (theater, music)
+	\end{itemize}
 
 \begin{center}
-\hspace{-0.8in}\emph{References provided upon request\\[8pt]}
+\vspace{-0.26in}\hspace{-0.8in}\emph{References provided upon request\\[8pt]}
 \end{center}
 
 \end{resume}
