@@ -1,3 +1,5 @@
+#!/usr/bin/make -f
+
 RESUMES=${wildcard *.tex}
 PDFS=${RESUMES:.tex=.pdf}
 
