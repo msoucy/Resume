@@ -1,6 +1,8 @@
 \documentclass[line]{res}
 \usepackage{enumitem} % Allows for adding options to lists
 \usepackage[left=1cm,right=2.5cm,vmargin=1cm]{geometry}
+\newcommand{\project}[2]{{\bf #1}\hfill #2\\}
+\newcommand{\job}[3]{{\bf #1} {\it #2}\hfill #3\\}
 
 \author{Matthew Soucy}
 \title{Matthew Soucy}
@@ -9,17 +11,13 @@
 \setlength{\textheight}{11.5in} % increase text height to fit on 1-page
 \name{Matthew Soucy}
 \address{\large
-	2433 Nathaniel Rochester Hall
-	\\
-	Rochester, NY 14623
-	\\
+	2433 Nathaniel Rochester Hall \\
+	Rochester, NY 14623 \\
 	(585) 204-7402
 }
 \address{\it
-	msoucy@csh.rit.edu
-	\\
-	http://msoucy.me/
-	\\
+	msoucy@csh.rit.edu \\
+	http://msoucy.me/ \\
 	http://linkedin.com/in/msoucy
 }
 
@@ -29,8 +27,7 @@
 
 	Rochester Institute of Technology, Rochester, NY
 	\hfill
-	\textit{G.P.A. 3.050/4.0 (Professional 3.143/4.0)}
-	\\
+	\textit{G.P.A. 3.050/4.0 (Professional 3.143/4.0)} \\
 	Bachelor of Science, Computer Science
 	\hfill
 	\textit{Expected Graduation Fall 2015}
@@ -46,54 +43,35 @@
 
 \section{EXPERIENCE}
 
-	\textbf{Software Intern}
-	\textit{BAE Systems, Inc., Nashua NH}
-	\hfill
-	2011-2014 \textit{ongoing}\\
+	\job{Software Intern}{BAE Systems, Inc., Nashua NH}{2011 - \textit{ongoing}}
 	Developed and redesigned simulation tools for Electronic Warfare using a real-time embedded system.
 	Developed programs in C++, Python, and Perl to fix and enhance in-house tools for testing and version control enhancement.
 	Work required a Secret-level security clearance.
 
-	\textbf{Grader \& Student Lab Instructor}
-	\textit{Rochester Institute of Technology}
-	\hfill
-	Fall 2012 - Winter 2013\\
+	\job{Grader \& Student Lab Instructor}{Rochester Institute of Technology}{Fall 2012 - Winter 2013}
 	Graded assignments and worked with students for several courses in the beginning Computer Science sequence.
 	Wrote a variety of tools to aid in plagiarism detection and grading accuracy and consistency.
 	Provided instruction and assistance during laboratory sessions.
 	Held tutoring hours twice a week.
 
-	\textbf{Software Lead}
-	\textit{FIRST Robotics Team 166, Merrimack NH}
-	\hfill
-	Fall 2007-Spring 2011\\
+	\job{Software Lead}{FIRST Robotics Team 166, Merrimack NH}{Fall 2007 - Spring 2011}
 	Led and participated in a team of programmers to develop a program to control the team's robot.
 	Received the Dean's List award at the Granite State Regional in 2011.
 
 \section{RELEVANT PROJECTS}
 
-	\textbf{Device tracking system (``Mass over Volume'')}
-	\hfill
-	Fall 2013
-	\\
-	Raspberry Pi-powered device that utilises Wi-Fi signals to detect the number of people in an area, derived from and inspired by ``Denisty'' by Rounded Co, who also helped develop Mass over Volume.
+	\project{Device tracking system (``Mass over Volume'')}{Fall 2013}
+	Raspberry Pi-powered device that utilises Wi-Fi signals to detect the number of people in an area, derived from and inspired by ``Density'' by Rounded Co, who also helped develop Mass over Volume.
 	A small demonstration allowed for the technology to be used to push a notification to a phone, with the suggested goal being to provide a "usual order" system at coffee shops.
-	
-	\textbf{Object-Oriented Binding Library (``Metus'')}
-	\hfill
-	Fall 2012 - Spring 2013, ongoing
-	\\
+
+	\project{Object-Oriented Binding Library (``Metus'')}{Fall 2012 - ongoing}
 	Object-oriented bindings to adapt C libraries to idiomatic D libraries.
 	Wraps the ZeroMQ socket library and the ncurses user interface library, and includes a Protocol Buffer serialization library implementation developed from scratch.
-	
-	\textbf{ClearCase library (``cleartoolscript'')}
-	\hfill
-	Summers 2011-2013
-	\\
+
+	\project{ClearCase library (``cleartoolscript'')}{Summers 2011-2013}
 	High-level shell wrapper in Python to work with the ClearCase version control system. Contains functionality to use the most commonly-required tools.
-	
-	\textbf{Open-Source Projects}
-	\\
+
+	\project{Open-Source Projects}{}
 	Miscellaneous tools, libraries, and programs are available on http://github.com/msoucy
 
 \section{LEADERSHIP \& OTHER ACTIVITIES}
