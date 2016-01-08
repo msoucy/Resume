@@ -1,9 +1,11 @@
 \documentclass[line]{res}
 \usepackage{enumitem} % Allows for adding options to lists
 \usepackage[left=1cm,right=2.5cm,vmargin=1cm]{geometry}
-\usepackage[pdftex,pdfauthor=Matthew Soucy,
-			pdftitle=Resume for Matthew Soucy]{hyperref}
-\usepackage{hyperref}
+\usepackage[unicode,pdftex,pdfusetitle]{hyperref}
+\hypersetup{
+	pdftitle={Resume for Matthew Soucy},
+	pdfauthor={Matthew Soucy}
+}
 
 \newcommand{\project}[2][]{{\bf #2}\hfill #1\\}
 \newcommand{\email}[1]{\href{mailto:#1}{\protect\nolinkurl{#1}}}
