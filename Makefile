@@ -6,7 +6,7 @@ PDFS=${RESUMES:.tex=.pdf}
 all: $(PDFS)
 
 %.pdf: %.tex
-	pdflatex $(@:.pdf=.tex)
+	pdflatex -interaction=nonstopmode $(@:.pdf=.tex)
 
 clean:
 	rm -rf *.log *.aux >& /dev/null
