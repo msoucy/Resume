@@ -1,107 +1,124 @@
-\documentclass[line]{res}
-\usepackage{enumitem} % Allows for adding options to lists
-\usepackage[left=1cm,right=2.5cm,vmargin=1cm]{geometry}
-\usepackage[unicode,pdftex,pdfusetitle]{hyperref}
-\hypersetup{
-	pdftitle={Resume for Matthew Soucy},
-	pdfauthor={Matthew Soucy}
-}
+\documentclass[a4paper, oneside, final]{scrartcl}
+\usepackage[document]{ragged2e}
+\usepackage{scrlayer-scrpage} % Provides headers and footers configuration
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{ebgaramond} % Use the EB Garamond font
+\usepackage{microtype} % To enable letterspacing
+\usepackage[unicode,pdftex,pdfusetitle]{hyperref} % To enable hyperlinks
+\usepackage[left=1cm,right=2.5cm,vmargin=2cm]{geometry}
 
-\newcommand{\project}[2][]{{\bf #2}\hfill #1\\}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
+
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+\addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\textheight}{3cm} % Adjust the text height - less whitespace at the bottom of the page
+
+\newcommand{\gray}{\rowcolor[gray]{.90}} % Custom highlighting for the work experience and education sections
+
+%----------------------------------------------------------------------------------------
+
 \newcommand{\email}[1]{\href{mailto:#1}{\protect\nolinkurl{#1}}}
 \def\ongoing{\textit{ongoing}}
-\setlist{leftmargin=10pt}
 \setlength{\textheight}{11.5in} % increase text height to fit on 1-page
+\newcommand{\job}[4]{
+	\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+	\gray Employer & \textbf{#2} \hfill {#3}\\
+	\gray Job Title & \textbf{#1}\\
+	& #4
+	\end{tabularx}
+}
+\newcommand{\project}[3][]{
+	\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+		\gray Project & \textbf{#2} \hfill {#1}\\
+		& #3
+	\end{tabularx}
+}
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\name{Matthew Soucy}
-\address{\parbox{\linewidth}{
-	\null\hfill
-	{\large 1 Reeds Ferry Way --- Merrimack, NH 03054 --- (585) 204-7402}\\
-	\null\hfill
-	{\email{recruiting@msoucy.me} --- \url{http://msoucy.me/} --- \url{http://linkedin.com/in/msoucy}}
-}}
+\begin{center} % Center everything in the document
 
-\newenvironment{job}[3]{ \begingroup {\bf #1} {\it #2} \hfill #3\\ }{ \endgroup }
+{\fontsize{36}{36}\selectfont\scshape\textls[200]{Matthew Soucy}}
 
-\begin{resume}
+{\fontsize{12.5}{17}\selectfont % Letter spacing and font size
+\textls[150]{1 Reeds Ferry Way{\large\textperiodcentered} Merrimack {\large\textperiodcentered} NH 03054}\\
+{\Large\Letter} \textls[150]{recruiting@msoucy.me \ {\Large\Telefon} (603) 440-4828}}
 
-\section{TECHNICAL SKILLS}
+%----------------------------------------------------------------------------------------
 
-	\begin{itemize}
-		\item Strong programming skills in C++, D, and Python
-		\item Working knowledge of CMake, Regular Expressions, C\#, C, \LaTeX, Java, Haskell, Kotlin, and Javascript
-		\item Familiar with the Git, Mercurial, ClearCase, and Subversion version control systems
-		\item Background in development for Linux, Windows, and real-time embedded systems (Integrity)
-	\end{itemize}
+\section{Technical Skills}
 
-\section{EXPERIENCE}
+	\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+	Languages & C++, Python, Java, Bash, Kotlin, Ruby, D, C\#, C, \LaTeX, Haskell, Javascript \\
+	Operating Systems & Linux, Windows, Integrity \\
+	Tools & Git, Vim, Regular Expressions, Mercurial, ClearCase, Subversion \\
+	\end{tabular}
 
-	\begin{job}{Senior Software Engineer}{BAE Systems, Inc., Nashua NH}{January 2016 - \ongoing}
+\section{Experience}
+
+	\job{Senior Software Engineer}{BAE Systems, Inc., Nashua NH}{January 2016 - \ongoing}{
 		Developed and redesigned simulation tools for Electronic Warfare using a real-time embedded system.
 		Developed programs in C++, Python, and Perl to fix and enhance in-house tools for testing and version control enhancement.
 		Work requires a Secret-level security clearance.
 		Intern from 2011-2015.
-	\end{job}
+	}
 
-	\begin{job}{Software Mentor}{FIRST Robotics Team 166, Merrimack NH}{Fall 2011 - \ongoing}
-                Architected robot software design and development process.
-                Maintained reusable code and infrastructure.
-                Taught high school students introductory to moderate Java programming.
+	\job{Software Mentor}{FIRST Robotics Team 166, Merrimack NH}{Fall 2011 - \ongoing}{
+        Architected robot software design and development process.
+        Maintained reusable code and infrastructure.
+        Taught high school students introductory to moderate Java programming.
 		Former student and recipient of the Dean's List award at the Granite State Regional in 2011.
-	\end{job}
+	}
 
-	\begin{job}{Captain}{FOSS@MAGIC, Rochester Institute of Technology}{Fall 2014 - Spring 2015}
+	\job{Captain}{FOSS@MAGIC, Rochester Institute of Technology}{Fall 2014 - Spring 2015}{
 		Student leader for an initiative that promotes open source software development.
 		Coordinated numerous ``hackathon'' programming events, trips, and demonstrations.
-	\end{job}
+	}
 
-	\begin{job}{Grader \& Student Lab Instructor}{Rochester Institute of Technology}{Fall 2012 - Winter 2013}
-		Graded assignments and tutored students in beginning Computer Science sequence courses.
-		Wrote a variety of tools to aid in plagiarism detection and grading accuracy and consistency.
-		Instructed and assisted students during laboratory sessions.
-		Administered tutoring hours twice a week.
-	\end{job}
+\section{Education}
+	
+	\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+		\gray Degree & \textbf{Bachelor of Science in Computer Science}\\
+		\gray University & \textbf{Rochester Institute of Technology}, Rochester, NY, USA\\
+		\gray GPA & \textbf{3.150/4.0}\\
+		\gray Period & \textbf{January 2011 --- December 2015}\\
+		Minor & \textbf{ASL \& Deaf Cultural Studies}\\
+		Minor & \textbf{Free and Open Source Software}
+	\end{tabularx}
 
-\section{EDUCATION}
+\section{Relevant Projects}
 
-	Rochester Institute of Technology, Rochester, NY
-	\hfill
-	\textit{G.P.A. 3.150/4.0}
-	\\
-	Bachelor of Science, Computer Science
-	\\
-	Minors in ASL \& Deaf Cultural Studies and Free and Open Source Software
-	\hfill
-	\textit{Graduated December 2015}
+	\project[Fall 2017 - \ongoing]{Reusable Robotics Software Library (``chopshoplib'')}{
+		Software library for reusable components for the FIRST robotics competition.
+		Designed as a compatible extension of the existing ecosystem, with a focus on making common patterns and testing easy.
+	}
 
-\section{RELEVANT PROJECTS}
+	\project[Fall 2012 - \ongoing]{Protocol Buffer Structure Generation Library (``dproto'')}{
+		Serialization library implementing Google's Protocol Buffer syntax.
+		Parses structure definitions at compile time and generates appropriate code to allow interfacing with tools written in other languages.
+		Developed a black box implementation for the D programming language.
+	}
 
-	\project[Fall 2017 - \ongoing]   {Reusable Robotics Software Library (``chopshoplib'')}
-        Software library for reusable components for the FIRST robotics competition.
-        Designed as a compatible extension of the existing ecosystem, with a focus on making common patterns and testing easy.
+	\project[Summers 2011-2013]{ClearCase library (``cleartoolscript'')}{
+		High-level shell wrapper in Python to work with the ClearCase version control system.
+		Contains functionality to programmatically use the most commonly-required tools.
+	}
 
-	\project[Fall 2012 - \ongoing]   {Protocol Buffer Structure Generation Library (``dproto'')}
-	Serialization library implementing Google's Protocol Buffer syntax.
-	Parses structure definitions at compile time and generates appropriate code to allow interfacing with tools written in other languages.
-	Developed a black box implementation for the D programming language.
+	\project{Open-Source Projects}{
+		Miscellaneous tools, libraries, and programs are available at \url{http://github.com/msoucy}
+	}
 
-	\project[Summers 2011-2013]      {ClearCase library (``cleartoolscript'')}
-	High-level shell wrapper in Python to work with the ClearCase version control system.
-	Contains functionality to programmatically use the most commonly-required tools.
-
-	\project                         {Open-Source Projects}
-	Miscellaneous tools, libraries, and programs are available at \url{http://github.com/msoucy}
-
-\section{LEADERSHIP \& OTHER ACTIVITIES}
+\section{Leadership \& Other Activities}
 	\begin{itemize}
-		\item Active member of Computer Science House at the Rochester Institute of Technology.
+		\item Alum of Computer Science House at the Rochester Institute of Technology.
 		\item Studied American Sign Language, Esperanto, and French
 		\item Experience in the performing arts, including theater and music.
 	\end{itemize}
 
-\begin{center}\vspace{-0.25in}\emph{References provided upon request\\[8pt]}\end{center}
-
-\end{resume}
+\end{center}
 \end{document}
